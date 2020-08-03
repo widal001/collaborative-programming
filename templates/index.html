@@ -14,7 +14,9 @@
         }
 
         .iphone {
-            background-image: url('img/iphone.png');
+            background-image: url(
+              {{ url_for('static', filename='img/iphone.png') }}
+            );
             background-repeat: no-repeat;
             background-size: 100%;
             width: 500px;
