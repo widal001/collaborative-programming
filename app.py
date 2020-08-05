@@ -3,4 +3,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template('index.html')
+    messages = [
+        {'user': 'bd', 'message': 'HEYO!!! WOOT!'},
+        {'user': 'jj', 'message': 'Looks good!'}
+    ]
+    return render_template('index.html', messages=messages)

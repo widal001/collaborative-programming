@@ -14,9 +14,7 @@
         }
 
         .iphone {
-            background-image: url(
-              {{ url_for('static', filename='img/iphone.png') }}
-            );
+            background-image: url('/static/img/iphone.png');
             background-repeat: no-repeat;
             background-size: 100%;
             width: 500px;
@@ -124,33 +122,20 @@
 <body>
     <div class="iphone">
         <div class="chat">
-            <div class="mine messages">
-                <div class="message last">
-                    Dude
-                </div>
-            </div>
+            {% for message in messages %}
+            {% if message.user == 'bd' %}
             <div class="yours messages">
-                <div class="message">
-                    Hey!
+                {% else %}
+                <div class="mine messages">
+                    {% endif %}
+                    <div class="message last">
+                        {{message.message}}
+                    </div>
                 </div>
-                <div class="message">
-                    You there?
-                </div>
-                <div class="message last">
-                    Hello, how's it going?
-                </div>
-            </div>
-            <div class="mine messages">
-                <div class="message">
-                    Great thanks!
-                </div>
-                <div class="message last">
-                    How about you?
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
