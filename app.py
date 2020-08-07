@@ -6,6 +6,8 @@ def hello_world():
     # {'user': 'bd', 'message': ''}
     # {'user': 'jj', 'message': ''}
     messages = [
-        {'user': 'bd', 'message': 'Hi'}
+        {'user': 'bd', 'message': 'Hi'},
+        {'user': 'bd', 'message': 'This is Billy'},
+
     ]
     return render_template('index.html', messages=messages)
