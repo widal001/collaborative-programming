@@ -9,6 +9,6 @@ def hello_world():
         {'user': 'bd', 'message': 'Hi'},
         {'user': 'bd', 'message': 'This is Billy'},
         {'user': 'jj', 'message': 'Hey how\'s it going?'},
-        
+        {'user': 'jj', 'message': "It's going well! How about you?"},
     ]
     return render_template('index.html', messages=messages)
